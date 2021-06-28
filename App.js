@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, StyleSheet, Button, TextInput, Alert, Text} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import {NavigationContainer} from '@react-navigation/native';
@@ -6,10 +6,16 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Welcome from './Welcome';
 
 const Login = ({navigation}) => {
+  const [text, setText] = useState('');
   return (
     <View style={styles.container}>
       <Text>Log in</Text>
-      <TextInput style={styles.input} placeholder="user name" />
+      <TextInput
+        style={styles.input}
+        placeholder="userName"
+        onChangeText={text => setText(text)}
+        defaultValue={text}
+      />
       <TextInput style={styles.input} placeholder="password" />
       <View style={styles.checkboxContainer}>
         <CheckBox />
@@ -18,7 +24,7 @@ const Login = ({navigation}) => {
       <Button
         color="#f194ff"
         title="Log in"
-        onPress={() => navigation.navigate('Welcome')}
+        onPress={() => navigation.navigate('Welcome', {text: text})}
       />
     </View>
   );
