@@ -1,17 +1,23 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { StyleSheet, Button, View, SafeAreaView, Text, Alert } from 'react-native';
 
-const HelloWorldApp = () => {
-  console.log("Starting");
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center"
-      }}>
-      <Text>Hello, hey!</Text>
+
+
+const App = () => (
+  <SafeAreaView >
+    <View>
+      <Text >
+       Title
+      </Text>
+      <Button
+        title="Press me"
+        onPress={() => Alert.alert('Simple Button pressed')}
+      />
     </View>
-  )
-}
-export default HelloWorldApp;
+    
+  </SafeAreaView>
+);
+
+
+
+export default App;
