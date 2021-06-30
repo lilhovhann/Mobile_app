@@ -1,50 +1,12 @@
-import React, {useState, Component} from 'react';
-import {
-  Platform,
-  View,
-  StyleSheet,
-  Button,
-  TextInput,
-  Alert,
-  Text,
-} from 'react-native';
-import CheckBox from '@react-native-community/checkbox';
+import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Welcome from './Welcome';
+import Login from './android/app/src/components/Login';
+import emptyCheck from './android/app/src/components/Validation';
 
-const Login = ({navigation}) => {
-  const buttonClickListener = () => {
-    if (username == '') {
-      Alert.alert('Please enter the text to proceed');
-    } else {
-      navigation.navigate('Welcome', {text: username});
-    }
-  };
-  const [username, setText] = useState('');
-  return (
-    <View style={styles.container}>
-      <Text>Log in</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="username"
-        onChangeText={username => setText(username)}
-      />
-      <TextInput style={styles.input} placeholder="password" />
-      <View style={styles.checkboxContainer}>
-        <CheckBox />
-        <Text style={styles.label}>Remember me</Text>
-      </View>
-      <Button
-        color="#f194ff"
-        title="Log in"
-        // onPress={() => navigation.navigate('Welcome', {text: username})}
-        onPress={buttonClickListener}
-      />
-    </View>
-  );
-};
-
+emptyCheck;
+Login;
 const Stack = createStackNavigator();
 
 function App() {
@@ -57,32 +19,5 @@ function App() {
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#ecf0f1',
-  },
-  input: {
-    width: 200,
-    height: 44,
-    padding: 10,
-    borderWidth: 1,
-    borderColor: 'black',
-    marginBottom: 10,
-  },
-  button: {
-    color: '#f194ff',
-  },
-  label: {
-    margin: 8,
-  },
-  checkboxContainer: {
-    flexDirection: 'row',
-    marginBottom: 20,
-  },
-});
 
 export default App;
