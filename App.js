@@ -1,20 +1,34 @@
-import React, {useState} from 'react';
-import {View, StyleSheet, Button, TextInput, Alert, Text} from 'react-native';
+import React, {useState, Component} from 'react';
+import {
+  Platform,
+  View,
+  StyleSheet,
+  Button,
+  TextInput,
+  Alert,
+  Text,
+} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Welcome from './Welcome';
 
 const Login = ({navigation}) => {
-  const [text, setText] = useState('');
+  const buttonClickListener = () => {
+    if (username == '') {
+      Alert.alert('Please enter the text to proceed');
+    } else {
+      navigation.navigate('Welcome', {text: username});
+    }
+  };
+  const [username, setText] = useState('');
   return (
     <View style={styles.container}>
       <Text>Log in</Text>
       <TextInput
         style={styles.input}
-        placeholder="userName"
-        onChangeText={text => setText(text)}
-        defaultValue={text}
+        placeholder="username"
+        onChangeText={username => setText(username)}
       />
       <TextInput style={styles.input} placeholder="password" />
       <View style={styles.checkboxContainer}>
@@ -24,7 +38,8 @@ const Login = ({navigation}) => {
       <Button
         color="#f194ff"
         title="Log in"
-        onPress={() => navigation.navigate('Welcome', {text: text})}
+        // onPress={() => navigation.navigate('Welcome', {text: username})}
+        onPress={buttonClickListener}
       />
     </View>
   );
