@@ -7,6 +7,7 @@ import emptyCheck from './android/app/src/components/Validation';
 
 emptyCheck;
 Login;
+
 const Stack = createStackNavigator();
 
 function App() {

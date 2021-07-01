@@ -16,10 +16,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#ced6de',
     borderRadius: 25,
     height: 50,
-    marginBottom: 20,
+    marginBottom: 0,
     justifyContent: 'center',
     padding: 20,
+    marginTop: 10,
   },
+  errorText: {
+    marginBottom: 20,
+    color: 'red',
+  },
+
   inputText: {
     height: 50,
     color: 'black',
@@ -30,12 +36,12 @@ const styles = StyleSheet.create({
   },
   loginBtn: {
     width: '80%',
-    backgroundColor: '#275AB6',
+    color: '#275AB6',
     borderRadius: 25,
     height: 50,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 10,
+    padding: 10,
     marginBottom: 10,
   },
   loginText: {

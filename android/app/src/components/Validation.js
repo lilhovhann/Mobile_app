@@ -1,8 +1,6 @@
-import {Alert} from 'react-native';
-
-const emptyCheck = (userName, navigation) => {
-  if (userName == '') {
-    Alert.alert('Please enter the text to proceed');
+const emptyCheck = (userName, password, navigation) => {
+  if (userName == '' || password == '') {
+    return false;
   } else {
     navigation.navigate('Welcome', {text: userName});
   }
