@@ -3,7 +3,7 @@ import {Image} from 'react-native';
 import {View, TextInput, Text, Button} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import styles from '../styles/ComponentStyles';
-import emptyCheck from './Validation';
+import validate from './Validation';
 
 import Error from './Error';
 
@@ -15,6 +15,7 @@ const Login = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Image style={styles.logo} source={require('../assets/axele.png')} />
+
       <View style={styles.inputView}>
         <TextInput
           style={styles.inputText}
@@ -22,7 +23,9 @@ const Login = ({navigation}) => {
           onChangeText={username => setUserName(username)}
         />
       </View>
-      {!userName && <Error />}
+
+      {!userName && <Error text="Empty username" />}
+
       <View style={styles.inputView}>
         <TextInput
           style={styles.inputText}
@@ -30,18 +33,17 @@ const Login = ({navigation}) => {
           onChangeText={password => setPassword(password)}
         />
       </View>
-      {!password && <Error />}
+      {!password && <Error text="Empty password" />}
       <View style={styles.checkboxContainer}>
         <CheckBox />
         <Text style={styles.label}>Remember me</Text>
       </View>
-
       <Button
         disabled={!userName || !password}
         title={'Log in'}
         color="#275AB6"
         style={styles.loginBtn}
-        onPress={() => emptyCheck(userName, password, navigation)}></Button>
+        onPress={() => validate(userName, password, navigation)}></Button>
     </View>
   );
 };

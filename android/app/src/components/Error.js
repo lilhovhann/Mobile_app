@@ -11,9 +11,9 @@ import {
 import styles from '../styles/ComponentStyles';
 import emptyCheck from './Validation';
 
-const Error = () => {
+const Error = props => {
   if (emptyCheck) {
-    return <Text style={styles.errorText}>This field is required</Text>;
+    return <Text style={styles.errorText}>{props.text}</Text>;
   } else {
     <Text></Text>;
   }
