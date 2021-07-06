@@ -1,13 +1,6 @@
 import React from 'react';
 
-import {
-  View,
-  Button,
-  TextInput,
-  Alert,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
+import {Text} from 'react-native';
 import styles from '../styles/ComponentStyles';
 import emptyCheck from './Validation';
 

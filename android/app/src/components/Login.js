@@ -25,7 +25,6 @@ const Login = ({navigation}) => {
       </View>
 
       {!userName && <Error text="Empty username" />}
-
       <View style={styles.inputView}>
         <TextInput
           style={styles.inputText}
