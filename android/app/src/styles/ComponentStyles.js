@@ -5,6 +5,30 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
     alignItems: 'center',
+    flexDirection: 'column',
+  },
+
+  scrollView: {
+    height: '20%',
+    width: '80%',
+    margin: 20,
+    alignSelf: 'center',
+    padding: 20,
+    borderWidth: 5,
+    borderRadius: 5,
+    borderColor: 'black',
+    backgroundColor: 'lightblue',
+  },
+
+  contentContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'lightgrey',
+    paddingBottom: 50,
+  },
+
+  profileContainer: {
+    flex: 1,
   },
   logo: {
     marginTop: 100,
@@ -62,6 +86,24 @@ const styles = StyleSheet.create({
   },
   loginText: {
     color: 'white',
+  },
+  pageTitle: {
+    textTransform: 'uppercase',
+    fontWeight: 'bold',
+    padding: 10,
+    fontSize: 15,
+    letterSpacing: 5,
+  },
+
+  iconView: {
+    paddingTop: 8,
+  },
+  profpic: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    width: '100%',
+    height: undefined,
+    aspectRatio: 2,
   },
 });
 
