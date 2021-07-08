@@ -243,14 +243,23 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   companyMailText: {
-    color: '#334455',
+    color: '#778899',
     position: 'absolute',
     fontFamily: 'Roboto',
-    fontWeight: '500',
+    fontWeight: '400',
 
     fontSize: 14,
     lineHeight: 16.41,
     textAlign: 'center',
+  },
+  line1: {
+    flex: 1,
+    width: 287,
+    height: 1,
+    top: 345,
+    left: 110,
+    position: 'absolute',
+    backgroundColor: '#CBD4E5',
   },
 });
 

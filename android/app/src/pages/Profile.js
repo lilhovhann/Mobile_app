@@ -118,6 +118,7 @@ const Profile = ({navigation}) => {
         <View style={styles.companyMailTextView}>
           <Text style={styles.companyMailText}>Company Email</Text>
         </View>
+        <View style={styles.line1}></View>
       </View>
     </ScrollView>
   );
