@@ -22,7 +22,7 @@ const Profile = ({navigation}) => {
               />
             </Svg>
           </View>
-          <View style={{flex: 1}}>
+          <View style={styles.pageTitleTextView}>
             <Text style={styles.pageTitleText}>profile</Text>
           </View>
         </View>

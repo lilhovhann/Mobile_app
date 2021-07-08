@@ -91,22 +91,28 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   pageTitleText: {
+    position: 'absolute',
     fontFamily: 'Roboto',
-    fontStyle: 'normal',
     fontWeight: '700',
-    top: 12,
-    height: 14,
     fontSize: 12,
-    lineHeight: 14,
+    lineHeight: 14.06,
     textAlign: 'center',
     color: '#112233',
     textTransform: 'uppercase',
     letterSpacing: 4,
   },
 
+  pageTitleTextView: {
+    flex: 1,
+    left: 158,
+    height: 14,
+    top: 12,
+  },
+
   iconView: {
     left: 16,
     top: 13,
+    position: 'absolute',
   },
   profpic: {
     flexDirection: 'row',
