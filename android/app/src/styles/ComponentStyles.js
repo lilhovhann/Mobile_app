@@ -29,6 +29,9 @@ const styles = StyleSheet.create({
 
   profileContainer: {
     flex: 1,
+    backgroundColor: '#F2F4F5',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   logo: {
     marginTop: 100,
@@ -87,16 +90,23 @@ const styles = StyleSheet.create({
   loginText: {
     color: 'white',
   },
-  pageTitle: {
+  pageTitleText: {
+    fontFamily: 'Roboto',
+    fontStyle: 'normal',
+    fontWeight: '700',
+    top: 12,
+    height: 14,
+    fontSize: 12,
+    lineHeight: 14,
+    textAlign: 'center',
+    color: '#112233',
     textTransform: 'uppercase',
-    fontWeight: 'bold',
-    padding: 10,
-    fontSize: 15,
-    letterSpacing: 5,
+    letterSpacing: 4,
   },
 
   iconView: {
-    paddingTop: 8,
+    left: 16,
+    top: 13,
   },
   profpic: {
     flexDirection: 'row',
@@ -104,6 +114,32 @@ const styles = StyleSheet.create({
     width: '100%',
     height: undefined,
     aspectRatio: 2,
+  },
+  iconchik: {
+    margin: 5,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: 25,
+    height: 25,
+    color: 'tomato',
+  },
+
+  profileTitleView: {
+    flex: 1,
+    height: 40,
+    flexDirection: 'row',
+    position: 'relative',
+    backgroundColor: '#E5E5E5',
+  },
+  profileContentView: {
+    flex: 1,
+    width: 210.49,
+    height: 140,
+    marginTop: 30,
+    alignItems: 'center',
+    flexDirection: 'column',
+    position: 'relative',
   },
 });
 
