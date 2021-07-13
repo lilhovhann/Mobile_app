@@ -2,14 +2,14 @@ import React from 'react';
 import {View, Text, ScrollView, Image} from 'react-native';
 import Svg from 'react-native-svg';
 import {Path} from 'react-native-svg';
-import styles from '../styles/ComponentStyles';
+import profileStyles from '../styles/profileStyles/Profile';
 
-const Profile = ({navigation}) => {
+const Profile = () => {
   return (
     <ScrollView>
-      <View style={styles.profileContainer}>
-        <View style={styles.profileTitleView}>
-          <View style={styles.iconView}>
+      <View style={profileStyles.profileContainer}>
+        <View style={profileStyles.profileTitleView}>
+          <View style={profileStyles.iconView}>
             <Svg
               width="14"
               height="14"
@@ -22,19 +22,19 @@ const Profile = ({navigation}) => {
               />
             </Svg>
           </View>
-          <View style={styles.pageTitleTextView}>
-            <Text style={styles.pageTitleText}>profile</Text>
+          <View style={profileStyles.pageTitleTextView}>
+            <Text style={profileStyles.pageTitleText}>profile</Text>
           </View>
         </View>
 
-        <View style={styles.profilePicView}>
+        <View style={profileStyles.profilePicView}>
           <View style={{flex: 1}}>
             <Image
-              style={styles.profpicStyle}
+              style={profileStyles.profpicStyle}
               source={require('../assets/Bitmap.png')}
             />
           </View>
-          <View style={styles.imageDownloadIconFrame}>
+          <View style={profileStyles.imageDownloadIconFrame}>
             <Svg
               width="30"
               height="30"
@@ -49,7 +49,7 @@ const Profile = ({navigation}) => {
               />
             </Svg>
           </View>
-          <View style={styles.imageDownloadIcon}>
+          <View style={profileStyles.imageDownloadIcon}>
             <Svg
               width="14"
               height="14"
@@ -62,7 +62,7 @@ const Profile = ({navigation}) => {
               />
             </Svg>
           </View>
-          <View style={styles.cameraIconFrame}>
+          <View style={profileStyles.cameraIconFrame}>
             <Svg
               width="30"
               height="30"
@@ -77,7 +77,7 @@ const Profile = ({navigation}) => {
               />
             </Svg>
           </View>
-          <View style={styles.cameraIcon}>
+          <View style={profileStyles.cameraIcon}>
             <Svg
               width="12"
               height="11"
@@ -93,12 +93,12 @@ const Profile = ({navigation}) => {
             </Svg>
           </View>
         </View>
-        <View style={styles.userNameView}>
-          <Text style={styles.userNameText}>Gene Hilliard</Text>
+        <View style={profileStyles.userNameView}>
+          <Text style={profileStyles.userNameText}>Gene Hilliard</Text>
         </View>
-        <View style={styles.mailView}>
+        <View style={profileStyles.mailView}>
           <Svg
-            style={styles.mailLogo}
+            style={profileStyles.mailLogo}
             width="20"
             height="16"
             viewBox="0 0 20 16"
@@ -112,13 +112,13 @@ const Profile = ({navigation}) => {
             />
           </Svg>
         </View>
-        <View style={styles.mailTextView}>
-          <Text style={styles.mailText}>sweet_joe@email.com</Text>
+        <View style={profileStyles.mailTextView}>
+          <Text style={profileStyles.mailText}>sweet_joe@email.com</Text>
         </View>
-        <View style={styles.companyMailTextView}>
-          <Text style={styles.companyMailText}>Company Email</Text>
+        <View style={profileStyles.companyMailTextView}>
+          <Text style={profileStyles.companyMailText}>Company Email</Text>
         </View>
-        <View style={styles.line1}></View>
+        <View style={profileStyles.line1}></View>
       </View>
     </ScrollView>
   );
