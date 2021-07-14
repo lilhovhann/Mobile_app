@@ -31,16 +31,16 @@ const profileStyles = StyleSheet.create({
   },
 
   profileContainer: {
-    flex: 1,
     backgroundColor: '#F2F4F5',
     flexDirection: 'column',
+    // flexBasis: '100%',
     alignItems: 'center',
   },
   profileTitleView: {
     flex: 1,
     height: 40,
     flexDirection: 'row',
-    position: 'relative',
+    // position: 'relative',
     backgroundColor: '#E5E5E5',
   },
   iconView: {
@@ -55,7 +55,6 @@ const profileStyles = StyleSheet.create({
     marginTop: 30,
     alignItems: 'center',
     flexDirection: 'column',
-    position: 'relative',
   },
   profpic: {
     flexDirection: 'row',
@@ -102,11 +101,10 @@ const profileStyles = StyleSheet.create({
   userNameView: {
     flex: 1,
     width: 210.49,
-    height: 140,
+    height: 21,
     marginTop: 10,
     alignItems: 'center',
     flexDirection: 'column',
-    position: 'relative',
   },
 
   userNameText: {
@@ -120,62 +118,64 @@ const profileStyles = StyleSheet.create({
   },
   mailView: {
     flex: 1,
-    top: 299,
-    left: 18,
-    position: 'absolute',
-  },
-  mailLogo: {
-    flex: 1,
-    left: 18,
-    position: 'absolute',
+    paddingTop: 14,
   },
 
   mailTextView: {
     flex: 1,
     width: 142,
     height: 16,
-    top: 287,
-    left: 73,
     flexDirection: 'column',
-    position: 'absolute',
   },
   mailText: {
     color: '#334455',
     position: 'absolute',
     fontFamily: 'Roboto',
     fontWeight: '900',
-
     fontSize: 14,
     lineHeight: 16.41,
-  },
-  companyMailTextView: {
-    flex: 1,
-    width: 98,
-    height: 16,
-    top: 309,
-    left: 73,
-    alignItems: 'center',
-    flexDirection: 'column',
-    position: 'absolute',
   },
   companyMailText: {
     color: '#778899',
-    position: 'absolute',
     fontFamily: 'Roboto',
     fontWeight: '400',
-
     fontSize: 14,
-    lineHeight: 16.41,
-    textAlign: 'center',
+    paddingTop: 6,
+    textAlign: 'left',
   },
   line1: {
     flex: 1,
     width: 287,
     height: 1,
-    top: 345,
-    left: 73,
+
+    left: 93,
     position: 'absolute',
     backgroundColor: '#CBD4E5',
+  },
+  phoneLogoView: {
+    flex: 1,
+    top: 350,
+    zIndex: 10,
+    left: 19,
+    width: 18,
+    height: 18,
+    position: 'absolute',
+  },
+  phoneTextView: {
+    flex: 1,
+    top: 350,
+    left: 73,
+    flexDirection: 'column',
+    position: 'absolute',
+  },
+  phoneText: {
+    color: '#334455',
+    position: 'relative',
+    fontFamily: 'Roboto',
+    fontWeight: '900',
+
+    fontSize: 14,
+    lineHeight: 16.41,
   },
 });
 

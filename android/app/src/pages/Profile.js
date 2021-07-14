@@ -96,29 +96,177 @@ const Profile = () => {
         <View style={profileStyles.userNameView}>
           <Text style={profileStyles.userNameText}>Gene Hilliard</Text>
         </View>
-        <View style={profileStyles.mailView}>
-          <Svg
-            style={profileStyles.mailLogo}
-            width="20"
-            height="16"
-            viewBox="0 0 20 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <Path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M18 0H2C0.9 0 0.01 0.9 0.01 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z"
-              fill="#334455"
-            />
-          </Svg>
+        <View
+          style={{
+            flexDirection: 'row',
+            marginLeft: 18,
+            alignItems: 'flex-start',
+            marginTop: 46,
+            height: 40,
+            width: '100%',
+          }}>
+          <View style={profileStyles.mailView}>
+            <Svg
+              width="20"
+              height="16"
+              viewBox="0 0 20 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <Path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M18 0H2C0.9 0 0.01 0.9 0.01 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z"
+                fill="#334455"
+              />
+            </Svg>
+          </View>
+          <View
+            style={{
+              flexDirection: 'column',
+              position: 'absolute',
+              marginLeft: 73,
+              alignContent: 'flex-end',
+              height: 40,
+              flex: 1,
+            }}>
+            <View style={profileStyles.mailTextView}>
+              <Text style={profileStyles.mailText}>sweet_joe@email.com</Text>
+            </View>
+            <View>
+              <Text style={profileStyles.companyMailText}>Company Email</Text>
+            </View>
+          </View>
         </View>
-        <View style={profileStyles.mailTextView}>
-          <Text style={profileStyles.mailText}>sweet_joe@email.com</Text>
+        <View style={[(profileStyles.line1, {top: 345})]}></View>
+
+        <View
+          style={{
+            flexDirection: 'row',
+            marginLeft: 18,
+            alignItems: 'flex-start',
+            marginTop: 46,
+            height: 40,
+            width: '100%',
+          }}>
+          <View
+            style={[
+              profileStyles.mailView,
+              {backgroundColor: 'green', width: 18},
+            ]}>
+            <Svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <Path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3.62 7.79C5.06 10.62 7.38 12.93 10.21 14.38L12.41 12.18C12.68 11.91 13.08 11.82 13.43 11.94C14.55 12.31 15.76 12.51 17 12.51C17.55 12.51 18 12.96 18 13.51V17C18 17.55 17.55 18 17 18C7.61 18 0 10.39 0 1C0 0.45 0.45 0 1 0H4.5C5.05 0 5.5 0.45 5.5 1C5.5 2.25 5.7 3.45 6.07 4.57C6.18 4.92 6.1 5.31 5.82 5.59L3.62 7.79Z"
+                fill="#334455"
+              />
+            </Svg>
+          </View>
+          <View
+            style={{
+              flexDirection: 'column',
+              position: 'absolute',
+              marginLeft: 73,
+              height: 40,
+              flex: 1,
+            }}>
+            <View style={profileStyles.mailTextView}>
+              <Text style={profileStyles.mailText}>+1 123-456-7896</Text>
+            </View>
+            <View>
+              <Text style={profileStyles.companyMailText}>Mobile</Text>
+            </View>
+          </View>
+          <View
+            style={{
+              position: 'relative',
+              marginLeft: 328,
+              marginTop: 16,
+            }}>
+            <Svg
+              width="8"
+              height="12"
+              viewBox="0 0 8 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <Path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3.43323e-05 10.59L1.41003 12L7.41003 6L1.41003 0L3.43323e-05 1.41L4.58003 6L3.43323e-05 10.59Z"
+                fill="#2B64CB"
+              />
+            </Svg>
+          </View>
         </View>
-        <View style={profileStyles.companyMailTextView}>
-          <Text style={profileStyles.companyMailText}>Company Email</Text>
+
+        <View style={(profileStyles.line1, {top: 427})}></View>
+
+        <View
+          style={{
+            flexDirection: 'row',
+            marginLeft: 18,
+            alignItems: 'flex-start',
+            marginTop: 46,
+            height: 40,
+            width: '100%',
+          }}>
+          <View style={profileStyles.mailView}>
+            <Svg
+              width="18"
+              height="22"
+              viewBox="0 0 18 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <Path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.04729 0H8.76357C4.94921 0.125036 2.01751 3.34472 2.01751 7.12706V9.37771H1.85989C0.819615 9.37771 0 10.1904 0 11.222V19.7557C0 20.7873 0.819615 21.6 1.85989 21.6H16.1401C17.1804 21.6 18 20.7873 18 19.7557V11.222C18 10.1904 17.1804 9.37771 16.1401 9.37771H16.0771V6.93951C16.0771 3.1259 12.9247 0 9.04729 0ZM10.3713 17.63C10.4029 17.8489 10.2452 18.0364 10.0246 18.0364H8.9843H7.94402C7.72335 18.0364 7.56573 17.8489 7.59726 17.63L8.00707 15.692C7.62878 15.3481 7.37659 14.848 7.47116 14.2853C7.56573 13.6289 8.13316 13.0975 8.79516 13.0037H8.9843C9.83544 13.0037 10.529 13.6914 10.529 14.5354C10.529 15.0043 10.3083 15.4419 9.96153 15.7232L10.3713 17.63ZM5.07539 9.37743H12.9878V6.93923C12.9878 4.75109 11.191 3.00059 9.01585 3.00059C8.9528 3.00059 8.88975 3.0084 8.8267 3.01622C8.76366 3.02403 8.70061 3.03185 8.63756 3.03185C6.58853 3.2194 5.07539 5.03242 5.07539 7.06426V9.37743Z"
+                fill="#334455"
+              />
+            </Svg>
+          </View>
+          <View
+            style={{
+              flexDirection: 'column',
+              position: 'absolute',
+              marginLeft: 73,
+              alignContent: 'flex-end',
+              height: 40,
+              flex: 1,
+            }}>
+            <View style={profileStyles.mailTextView}>
+              <Text style={profileStyles.mailText}>********</Text>
+            </View>
+            <View>
+              <Text style={profileStyles.companyMailText}>Password</Text>
+            </View>
+          </View>
+          <View
+            style={{
+              position: 'relative',
+              marginLeft: 328,
+              marginTop: 16,
+            }}>
+            <Svg
+              width="8"
+              height="12"
+              viewBox="0 0 8 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <Path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3.43323e-05 10.59L1.41003 12L7.41003 6L1.41003 0L3.43323e-05 1.41L4.58003 6L3.43323e-05 10.59Z"
+                fill="#2B64CB"
+              />
+            </Svg>
+          </View>
         </View>
-        <View style={profileStyles.line1}></View>
       </View>
     </ScrollView>
   );
